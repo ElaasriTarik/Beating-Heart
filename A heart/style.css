@@ -1,0 +1,87 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	background-color: #b483ca;
+	transition: all 1s ease-out;
+}
+.container {
+	width: 400px;
+	height: 400px;
+	background-color: transparent;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+	animation: animate 0.8s linear infinite;
+}
+.slower {
+	animation: animateSlower 1.7s linear infinite;
+}
+.leftSide {
+	width: 150px;
+	height: 200px;
+	background-color: pink;
+	position: relative;
+	top: 90px;
+left: 115px;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	transform: rotate(315deg);
+	transition: all 1s ease-out;
+    /* box-shadow: -1px -1px 5px 0 #262626 */
+}
+.rightSide {
+	width: 150px;
+	height: 200px;
+	background-color: pink;
+	position: absolute;
+	top: 88px;
+left: 160px;
+border-top-right-radius: 50%;
+border-top-left-radius: 50%;
+transform: rotate(48deg);
+transition: all 1s ease-out;
+    /* box-shadow: 1px -1px 5px #262626; */
+
+
+}
+
+@keyframes animate {
+	0% {
+    transform: scale(1.1);
+	}
+	50% {
+       transform: scale(1.2);
+
+	}
+	100% {
+     transform: scale(1.1);
+	}
+}
+
+@keyframes animateSlower {
+	0% {
+    transform: scale(1.1);
+	}
+	50% {
+       transform: scale(1.2);
+
+	}
+	100% {
+     transform: scale(1.1);
+	}
+}
+.active {
+	background-color: black;
+	transition: all 1s ease-out;
+}
+.gone {
+	background-color: #171217;
+	transition: all 1s ease-in-out;
+}
